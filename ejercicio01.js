@@ -2,9 +2,9 @@ const fs = require("fs");
 const crearStringFecha = () => {
   const fechaActual = new Date().toLocaleDateString();
   const horaActual = new Date().toLocaleTimeString();
-  return (timeStamp = fechaActual + " " + horaActual + "\n");
+  return fechaActual + " " + horaActual + "\n";
 };
-const guardarLog = async (mensaje) => {
+const guardarLog = (mensaje) => {
   const timeStamp = crearStringFecha();
   const mensajeFinal = mensaje + " - " + timeStamp;
   try {
